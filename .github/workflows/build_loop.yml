@@ -189,7 +189,19 @@ jobs:
           if $(ls ./patches/* &> /dev/null); then
           git apply ./patches/* --allow-empty -v --whitespace=fix
           fi
-
+          # --- L&L template starts here (do not delete these script lines) ---
+                    /bin/bash -c "$(curl -fsSL \
+                      https://raw.githubusercontent.com/... )" \
+                future_carbs_4h \
+                high_carb_limit \
+                no_auth \
+                override_sens \
+                now_line \
+                2hlollipop \
+                meal_week \
+                profiles \
+                basal_lock \
+                negative_insulin
           # Submodule Loop patches:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
